@@ -215,7 +215,7 @@ async def init_db():
     try:
         async with db_manager.get_connection() as conn:
             users_table_exists = await conn.fetchval(
-                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'users')"
+                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_schema = current_schema() AND table_name = 'users')"
             )
             
             if not users_table_exists:
