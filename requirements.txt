@@ -1,0 +1,41 @@
+# ================================================================
+# Auth Service - Python Dependencies
+# ================================================================
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.4.2
+pydantic-settings==2.0.3
+
+# Database
+asyncpg==0.29.0
+sqlalchemy==2.0.23
+
+# Security & Encryption
+bcrypt==4.1.1
+python-jose[cryptography]==3.3.0
+cryptography==41.0.7
+
+# HTTP Client (for inter-service calls)
+httpx==0.25.1
+aiohttp==3.9.1
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+uuid6==2025.0.1
+
+# Logging
+python-json-logger==2.0.7
+
+# Development & Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.12.1
+flake8==6.1.0
+isort==5.13.2
+mypy==1.7.1
+
+# Environment Management
+python-dotenv==1.0.0

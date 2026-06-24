@@ -1,0 +1,451 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.1, pytest-7.4.3, pluggy-1.6.0 -- C:\Users\DELL\Downloads\MICRO\GDB-Micro\users_service\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\DELL\Downloads\BT Project\BT-ECO-SYSTEM\gdb\gdb-service\users_service
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-3.7.1, asyncio-0.21.1, cov-4.1.0
+asyncio: mode=Mode.AUTO
+collecting ... collected 173 items
+
+tests/test_request_models.py::TestAddUserRequest::test_valid_add_user_request <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  0%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_special_characters_in_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  1%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_min_length_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  1%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_max_length_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  2%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_numeric_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  2%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_dots_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  3%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_hyphens_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  4%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_underscores_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  4%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_mixed_case_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  5%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_min_length_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  5%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_max_length_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  6%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_min_length_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  6%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_long_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  7%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_special_chars_in_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  8%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_spaces_in_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  8%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_empty_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  9%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_username_exceeding_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [  9%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_none_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 10%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_short_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 10%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_empty_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 11%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_login_id_exceeding_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 12%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_none_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 12%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_spaces_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 13%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_special_chars_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 13%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_hash_in_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 14%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_short_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 15%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_empty_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 15%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_none_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 16%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_missing_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 16%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_missing_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 17%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_missing_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 17%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_unicode_in_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 18%]
+tests/test_request_models.py::TestAddUserRequest::test_add_user_request_with_numeric_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 19%]
+tests/test_request_models.py::TestEditUserRequest::test_valid_edit_user_request_with_username_only <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 19%]
+tests/test_request_models.py::TestEditUserRequest::test_valid_edit_user_request_with_password_only <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 20%]
+tests/test_request_models.py::TestEditUserRequest::test_valid_edit_user_request_with_both_fields <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 20%]
+tests/test_request_models.py::TestEditUserRequest::test_valid_edit_user_request_empty <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 21%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_min_length_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 21%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_max_length_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 22%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_min_length_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 23%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_long_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 23%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_empty_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 24%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_username_exceeding_max <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 24%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_short_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 25%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_empty_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 26%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_unicode_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 26%]
+tests/test_request_models.py::TestEditUserRequest::test_edit_user_request_with_special_chars_in_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_request_models.py PASSED [ 27%]
+tests/test_response_models.py::TestUserResponse::test_valid_user_response PASSED [ 27%]
+tests/test_response_models.py::TestUserResponse::test_user_response_with_inactive_user PASSED [ 28%]
+tests/test_response_models.py::TestUserResponse::test_user_response_json_serialization PASSED [ 28%]
+tests/test_response_models.py::TestUserResponse::test_user_response_from_attributes PASSED [ 29%]
+tests/test_response_models.py::TestUserResponse::test_user_response_missing_user_id PASSED [ 30%]
+tests/test_response_models.py::TestUserResponse::test_user_response_missing_username PASSED [ 30%]
+tests/test_response_models.py::TestUserResponse::test_user_response_missing_login_id PASSED [ 31%]
+tests/test_response_models.py::TestUserResponse::test_user_response_missing_created_at PASSED [ 31%]
+tests/test_response_models.py::TestUserResponse::test_user_response_missing_is_active PASSED [ 32%]
+tests/test_response_models.py::TestUserResponse::test_user_response_with_invalid_user_id_type PASSED [ 32%]
+tests/test_response_models.py::TestUserResponse::test_user_response_with_invalid_is_active_type PASSED [ 33%]
+tests/test_response_models.py::TestUserResponse::test_user_response_with_large_user_id PASSED [ 34%]
+tests/test_response_models.py::TestAddUserResponse::test_valid_add_user_response PASSED [ 34%]
+tests/test_response_models.py::TestAddUserResponse::test_add_user_response_with_default_message PASSED [ 35%]
+tests/test_response_models.py::TestAddUserResponse::test_add_user_response_custom_message PASSED [ 35%]
+tests/test_response_models.py::TestEditUserResponse::test_valid_edit_user_response PASSED [ 36%]
+tests/test_response_models.py::TestEditUserResponse::test_edit_user_response_with_default_message PASSED [ 36%]
+tests/test_response_models.py::TestViewUserResponse::test_valid_view_user_response PASSED [ 37%]
+tests/test_response_models.py::TestViewUserResponse::test_view_user_response_matches_user_response PASSED [ 38%]
+tests/test_response_models.py::TestListUsersResponse::test_valid_list_users_response PASSED [ 38%]
+tests/test_response_models.py::TestListUsersResponse::test_list_users_response_with_empty_list PASSED [ 39%]
+tests/test_response_models.py::TestListUsersResponse::test_list_users_response_with_many_users PASSED [ 39%]
+tests/test_response_models.py::TestListUsersResponse::test_list_users_response_missing_users PASSED [ 40%]
+tests/test_response_models.py::TestListUsersResponse::test_list_users_response_missing_total_count PASSED [ 41%]
+tests/test_response_models.py::TestListUsersResponse::test_list_users_response_mismatched_count PASSED [ 41%]
+tests/test_response_models.py::TestInactivateUserResponse::test_valid_inactivate_user_response PASSED [ 42%]
+tests/test_response_models.py::TestInactivateUserResponse::test_inactivate_user_response_with_default_message PASSED [ 42%]
+tests/test_response_models.py::TestErrorResponse::test_valid_error_response PASSED [ 43%]
+tests/test_response_models.py::TestErrorResponse::test_error_response_with_long_detail PASSED [ 43%]
+tests/test_response_models.py::TestErrorResponse::test_error_response_missing_error_code PASSED [ 44%]
+tests/test_response_models.py::TestErrorResponse::test_error_response_missing_detail PASSED [ 45%]
+tests/test_response_models.py::TestErrorResponse::test_error_response_all_error_codes PASSED [ 45%]
+tests/test_role_validation.py::TestPasswordValidationForRoles::test_password_with_uppercase_and_digit <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 46%]
+tests/test_role_validation.py::TestPasswordValidationForRoles::test_password_complex <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 46%]
+tests/test_role_validation.py::TestPasswordValidationForRoles::test_password_no_uppercase_but_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 47%]
+tests/test_role_validation.py::TestPasswordValidationForRoles::test_password_no_digit_but_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 47%]
+tests/test_role_validation.py::TestPasswordValidationForRoles::test_password_too_short <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 48%]
+tests/test_role_validation.py::TestLoginIdValidationForRoles::test_login_id_with_dots <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 49%]
+tests/test_role_validation.py::TestLoginIdValidationForRoles::test_login_id_with_hyphens <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 49%]
+tests/test_role_validation.py::TestLoginIdValidationForRoles::test_login_id_numeric <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 50%]
+tests/test_role_validation.py::TestLoginIdValidationForRoles::test_login_id_with_special_chars <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 50%]
+tests/test_role_validation.py::TestLoginIdValidationForRoles::test_login_id_with_spaces <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 51%]
+tests/test_role_validation.py::TestUsernameValidationForRoles::test_username_simple <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 52%]
+tests/test_role_validation.py::TestUsernameValidationForRoles::test_username_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 52%]
+tests/test_role_validation.py::TestUsernameValidationForRoles::test_username_empty <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 53%]
+tests/test_role_validation.py::TestUsernameValidationForRoles::test_username_exceeds_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 53%]
+tests/test_role_validation.py::TestRequiredFieldsForRoles::test_missing_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 54%]
+tests/test_role_validation.py::TestRequiredFieldsForRoles::test_missing_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 54%]
+tests/test_role_validation.py::TestRequiredFieldsForRoles::test_missing_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 55%]
+tests/test_role_validation.py::TestEdgeCasesForRoles::test_username_with_special_chars <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 56%]
+tests/test_role_validation.py::TestEdgeCasesForRoles::test_login_id_all_digits <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 56%]
+tests/test_role_validation.py::TestEdgeCasesForRoles::test_login_id_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 57%]
+tests/test_role_validation.py::TestEdgeCasesForRoles::test_none_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 57%]
+tests/test_role_validation.py::TestEdgeCasesForRoles::test_none_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_role_validation.py PASSED [ 58%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_valid_add_user_request <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 58%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_add_user_with_all_fields <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 59%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_valid_request_minimum_valid_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 60%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_valid_request_complex_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 60%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_empty_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 61%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_missing_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 61%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_none_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 62%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_missing_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 63%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_none_login_id <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 63%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_missing_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 64%]
+tests/test_user_management.py::TestAddUserRequestValidation::test_invalid_none_password <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 64%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_with_uppercase_and_digit <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 65%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_complex_with_special_chars <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 65%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_very_long <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 66%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_no_uppercase_but_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 67%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_no_digit_but_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 67%]
+tests/test_user_management.py::TestPasswordValidationInAddUserRequest::test_password_too_short <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 68%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_with_dots <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 68%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_with_hyphens <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 69%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_numeric <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 69%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_all_digits <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 70%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 71%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_with_consecutive_dots <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 71%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_with_special_chars <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 72%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_with_spaces <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 72%]
+tests/test_user_management.py::TestLoginIdValidationInAddUserRequest::test_login_id_too_long <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 73%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_simple <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 73%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 74%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_with_special_chars <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 75%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_with_unicode <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 75%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_empty <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 76%]
+tests/test_user_management.py::TestUsernameValidationInAddUserRequest::test_username_exceeds_max_length <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 76%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_valid_edit_user_request_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 77%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_valid_edit_user_request_role <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 78%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_valid_edit_user_request_both_fields <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 78%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_edit_user_request_empty_allowed <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 79%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_edit_user_with_customer_role <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 79%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_edit_user_with_admin_role <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 80%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_invalid_edit_role_invalid_value_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 80%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_invalid_edit_role_lowercase_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 81%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_invalid_edit_empty_username <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 82%]
+tests/test_user_management.py::TestEditUserRequestValidation::test_invalid_edit_username_exceeds_max <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 82%]
+tests/test_user_management.py::TestValidRoleValues::test_role_customer_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 83%]
+tests/test_user_management.py::TestValidRoleValues::test_role_teller_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 83%]
+tests/test_user_management.py::TestValidRoleValues::test_role_admin_valid <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 84%]
+tests/test_user_management.py::TestRoleValuesAccepted::test_role_superuser_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 84%]
+tests/test_user_management.py::TestRoleValuesAccepted::test_role_user_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 85%]
+tests/test_user_management.py::TestRoleValuesAccepted::test_role_empty_string_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 86%]
+tests/test_user_management.py::TestRoleValuesAccepted::test_role_mixed_case_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 86%]
+tests/test_user_management.py::TestRoleValuesAccepted::test_role_numeric_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 87%]
+tests/test_user_management.py::TestEdgeCasesInAddUserRequest::test_all_fields_with_special_values <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 87%]
+tests/test_user_management.py::TestEdgeCasesInAddUserRequest::test_password_with_long_uppercase_sequence <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 88%]
+tests/test_user_management.py::TestEdgeCasesInAddUserRequest::test_all_fields_none <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 89%]
+tests/test_user_management.py::TestEdgeCasesInAddUserRequest::test_password_only_uppercase_and_special_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 89%]
+tests/test_user_management.py::TestEdgeCasesInAddUserRequest::test_password_only_lowercase_and_digit_accepted <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 90%]
+tests/test_user_management.py::TestRequestIntegration::test_add_user_then_edit_flow <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 90%]
+tests/test_user_management.py::TestRequestIntegration::test_multiple_valid_add_requests <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 91%]
+tests/test_user_management.py::TestRequestIntegration::test_multiple_valid_edit_requests <- ..\..\..\..\..\MICRO\GDB-Micro\users_service\tests\test_user_management.py PASSED [ 91%]
+tests/test_users_service.py::TestUsersService::test_positive_get_user_profile FAILED [ 92%]
+tests/test_users_service.py::TestUsersService::test_positive_verify_password PASSED [ 93%]
+tests/test_users_service.py::TestUsersService::test_negative_get_nonexistent_user FAILED [ 93%]
+tests/test_users_service.py::TestUsersService::test_negative_no_auth_token FAILED [ 94%]
+tests/test_users_service.py::TestUsersService::test_negative_invalid_token FAILED [ 94%]
+tests/test_users_service.py::TestUsersService::test_negative_expired_token FAILED [ 95%]
+tests/test_users_service.py::TestUsersService::test_negative_wrong_password PASSED [ 95%]
+tests/test_users_service.py::TestUsersService::test_negative_empty_password PASSED [ 96%]
+tests/test_users_service.py::TestUsersService::test_edge_malformed_json PASSED [ 97%]
+tests/test_users_service.py::TestUsersService::test_edge_sql_injection FAILED [ 97%]
+tests/test_users_service.py::TestUsersService::test_edge_special_characters_password PASSED [ 98%]
+tests/test_verify_endpoint_fix_new.py::TestVerifyEndpointFix::test_verify_endpoint_response_structure_user_not_found PASSED [ 98%]
+tests/test_verify_endpoint_fix_new.py::TestVerifyEndpointFix::test_verify_endpoint_response_structure_invalid_password PASSED [ 99%]
+tests/test_verify_endpoint_fix_new.py::TestVerifyEndpointFix::test_verify_endpoint_response_structure_valid_credentials PASSED [100%]
+
+================================== FAILURES ===================================
+_______________ TestUsersService.test_positive_get_user_profile _______________
+tests\test_users_service.py:54: in test_positive_get_user_profile
+    response = await client.get(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1757: in get
+    return await self.request(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1530: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1617: in send
+    response = await self._send_handling_auth(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1645: in _send_handling_auth
+    response = await self._send_handling_redirects(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1682: in _send_handling_redirects
+    response = await self._send_single_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1719: in _send_single_request
+    response = await transport.handle_async_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_transports\asgi.py:162: in handle_async_request
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\routing.py:264: in app
+    solved_result = await solve_dependencies(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\dependencies\utils.py:592: in solve_dependencies
+    solved = await call(**sub_values)
+..\auth_service\app\security\auth_dependencies.py:74: in get_current_user
+    config = get_jwt_config()
+..\auth_service\app\security\auth_dependencies.py:43: in get_jwt_config
+    raise RuntimeError(
+E   RuntimeError: JWT config not initialized. Call set_jwt_config() during startup.
+_____________ TestUsersService.test_negative_get_nonexistent_user _____________
+tests\test_users_service.py:86: in test_negative_get_nonexistent_user
+    with patch("app.services.view_user_service.ViewUserService.get_user_profile") as mock_view:
+C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py:1437: in __enter__
+    original, local = self.get_original()
+C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py:1410: in get_original
+    raise AttributeError(
+E   AttributeError: <class 'app.services.view_user_service.ViewUserService'> does not have the attribute 'get_user_profile'
+________________ TestUsersService.test_negative_no_auth_token _________________
+tests\test_users_service.py:100: in test_negative_no_auth_token
+    response = await client.get(f"{self.BASE_URL}/users/1")
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1757: in get
+    return await self.request(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1530: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1617: in send
+    response = await self._send_handling_auth(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1645: in _send_handling_auth
+    response = await self._send_handling_redirects(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1682: in _send_handling_redirects
+    response = await self._send_single_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1719: in _send_single_request
+    response = await transport.handle_async_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_transports\asgi.py:162: in handle_async_request
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\routing.py:264: in app
+    solved_result = await solve_dependencies(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\dependencies\utils.py:592: in solve_dependencies
+    solved = await call(**sub_values)
+..\auth_service\app\security\auth_dependencies.py:74: in get_current_user
+    config = get_jwt_config()
+..\auth_service\app\security\auth_dependencies.py:43: in get_jwt_config
+    raise RuntimeError(
+E   RuntimeError: JWT config not initialized. Call set_jwt_config() during startup.
+________________ TestUsersService.test_negative_invalid_token _________________
+tests\test_users_service.py:109: in test_negative_invalid_token
+    response = await client.get(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1757: in get
+    return await self.request(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1530: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1617: in send
+    response = await self._send_handling_auth(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1645: in _send_handling_auth
+    response = await self._send_handling_redirects(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1682: in _send_handling_redirects
+    response = await self._send_single_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1719: in _send_single_request
+    response = await transport.handle_async_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_transports\asgi.py:162: in handle_async_request
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\routing.py:264: in app
+    solved_result = await solve_dependencies(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\dependencies\utils.py:592: in solve_dependencies
+    solved = await call(**sub_values)
+..\auth_service\app\security\auth_dependencies.py:74: in get_current_user
+    config = get_jwt_config()
+..\auth_service\app\security\auth_dependencies.py:43: in get_jwt_config
+    raise RuntimeError(
+E   RuntimeError: JWT config not initialized. Call set_jwt_config() during startup.
+________________ TestUsersService.test_negative_expired_token _________________
+tests\test_users_service.py:121: in test_negative_expired_token
+    response = await client.get(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1757: in get
+    return await self.request(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1530: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1617: in send
+    response = await self._send_handling_auth(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1645: in _send_handling_auth
+    response = await self._send_handling_redirects(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1682: in _send_handling_redirects
+    response = await self._send_single_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1719: in _send_single_request
+    response = await transport.handle_async_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_transports\asgi.py:162: in handle_async_request
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\routing.py:264: in app
+    solved_result = await solve_dependencies(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\dependencies\utils.py:592: in solve_dependencies
+    solved = await call(**sub_values)
+..\auth_service\app\security\auth_dependencies.py:74: in get_current_user
+    config = get_jwt_config()
+..\auth_service\app\security\auth_dependencies.py:43: in get_jwt_config
+    raise RuntimeError(
+E   RuntimeError: JWT config not initialized. Call set_jwt_config() during startup.
+__________________ TestUsersService.test_edge_sql_injection ___________________
+tests\test_users_service.py:173: in test_edge_sql_injection
+    response = await client.get(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1757: in get
+    return await self.request(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1530: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1617: in send
+    response = await self._send_handling_auth(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1645: in _send_handling_auth
+    response = await self._send_handling_redirects(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1682: in _send_handling_redirects
+    response = await self._send_single_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_client.py:1719: in _send_single_request
+    response = await transport.handle_async_request(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\httpx\_transports\asgi.py:162: in handle_async_request
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\applications.py:1106: in __call__
+    await super().__call__(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\applications.py:122: in __call__
+    await self.middleware_stack(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\cors.py:83: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:79: in __call__
+    raise exc
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\middleware\exceptions.py:68: in __call__
+    await self.app(scope, receive, sender)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:20: in __call__
+    raise e
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:17: in __call__
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:718: in __call__
+    await route.handle(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:276: in handle
+    await self.app(scope, receive, send)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\starlette\routing.py:66: in app
+    response = await func(request)
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\routing.py:264: in app
+    solved_result = await solve_dependencies(
+..\..\..\..\..\MICRO\GDB-Micro\users_service\venv\Lib\site-packages\fastapi\dependencies\utils.py:592: in solve_dependencies
+    solved = await call(**sub_values)
+..\auth_service\app\security\auth_dependencies.py:74: in get_current_user
+    config = get_jwt_config()
+..\auth_service\app\security\auth_dependencies.py:43: in get_jwt_config
+    raise RuntimeError(
+E   RuntimeError: JWT config not initialized. Call set_jwt_config() during startup.
+=========================== short test summary info ===========================
+FAILED tests/test_users_service.py::TestUsersService::test_positive_get_user_profile
+FAILED tests/test_users_service.py::TestUsersService::test_negative_get_nonexistent_user
+FAILED tests/test_users_service.py::TestUsersService::test_negative_no_auth_token
+FAILED tests/test_users_service.py::TestUsersService::test_negative_invalid_token
+FAILED tests/test_users_service.py::TestUsersService::test_negative_expired_token
+FAILED tests/test_users_service.py::TestUsersService::test_edge_sql_injection
+======================== 6 failed, 167 passed in 2.51s ========================
