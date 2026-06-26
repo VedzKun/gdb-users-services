@@ -164,7 +164,7 @@ async def init_db():
     """
     Initialize database connection pool.
     Called during application startup.
-    Also handles automatic database creation, schema execution, and seeding.
+    Also handles automatic schema creation and seeding.
     """
     global db_manager
     from pathlib import Path
@@ -176,30 +176,8 @@ async def init_db():
     db_user = os.getenv('DATABASE_USER', 'postgres')
     db_password = os.getenv('DATABASE_PASSWORD', '')
     
-    # 1. Connect to postgres default DB to verify/create target DB
-    try:
-        logger.info(f"Checking if database {db_name} exists...")
-        temp_conn = await asyncpg.connect(
-            host=db_host,
-            port=int(db_port),
-            user=db_user,
-            password=db_password,
-            database="postgres"
-        )
-        db_exists = await temp_conn.fetchval(
-            "SELECT 1 FROM pg_database WHERE datname = $1",
-            db_name
-        )
-        if not db_exists:
-            logger.info(f"📦 Creating database: {db_name}")
-            await temp_conn.execute(f"CREATE DATABASE {db_name}")
-            logger.info(f"✅ Database created: {db_name}")
-        else:
-            logger.info(f"✅ Database already exists: {db_name}")
-        await temp_conn.close()
-    except Exception as e:
-        logger.error(f"⚠️ Error verifying/creating database {db_name}: {e}")
-
+    # On Render, we use a shared database with schemas per service.
+    # We do NOT attempt to create a new database (requires superuser on managed DBs).
     if db_password:
         database_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
     else:
@@ -214,8 +192,12 @@ async def init_db():
     # 2. Check if tables exist, run schema and seed if necessary
     try:
         async with db_manager.get_connection() as conn:
+            # Ensure the users_service schema exists first
+            await conn.execute("CREATE SCHEMA IF NOT EXISTS users_service")
+            await conn.execute("SET search_path TO users_service, public")
+            
             users_table_exists = await conn.fetchval(
-                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_schema = current_schema() AND table_name = 'users')"
+                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'users_service' AND table_name = 'users')"
             )
             
             if not users_table_exists:
@@ -224,7 +206,18 @@ async def init_db():
                 if schema_path.exists():
                     with open(schema_path, "r", encoding="utf-8") as f:
                         schema_sql = f.read()
-                    await conn.execute(schema_sql)
+                    # Execute statement by statement to handle partial states
+                    for stmt in schema_sql.split(";"):
+                        stmt_strip = stmt.strip()
+                        if stmt_strip and not stmt_strip.startswith("--"):
+                            try:
+                                await conn.execute(stmt_strip)
+                            except Exception as stmt_err:
+                                err_msg = str(stmt_err).lower()
+                                if "already exists" in err_msg or "duplicate" in err_msg:
+                                    logger.warning(f"⚠️ Skipping existing object: {stmt_err}")
+                                else:
+                                    logger.error(f"Error executing statement: {stmt_err}")
                     logger.info("✅ Schema executed successfully")
                 else:
                     logger.error(f"❌ Schema file not found at {schema_path}")
@@ -262,6 +255,8 @@ async def init_db():
                         username, login_id, pwd, role, is_active
                     )
                 logger.info(f"✅ Seeded {len(users_to_seed)} default users successfully")
+            else:
+                logger.info(f"✅ Database already has {user_count} users, skipping seed")
     except Exception as e:
         logger.error(f"❌ Error during schema verification/seeding: {e}")
         raise
