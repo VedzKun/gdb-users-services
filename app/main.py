@@ -39,6 +39,7 @@ from .api.activate_user_routes import router as activate_user_router
 from .api.internal_user_routes import router as internal_user_router
 
 # Configure logging
+# Render redeploy trigger: schema fix applied
 logging.basicConfig(
     level=getattr(logging, settings.LOG_LEVEL),
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -171,3 +172,4 @@ if __name__ == "__main__":
         port=settings.PORT,
         reload=settings.DEBUG,
     )
+
