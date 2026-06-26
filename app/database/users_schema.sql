@@ -7,14 +7,22 @@
 -- ================================================================
 -- ENUM TYPES
 -- ================================================================
-CREATE TYPE user_role_enum AS ENUM ('MANAGER', 'TELLER', 'ADMIN');
-CREATE TYPE audit_action_enum AS ENUM ('CREATE', 'UPDATE', 'ACTIVATE', 'INACTIVATE', 'REACTIVATE');
+-- Use DO blocks to safely create enum types (IF NOT EXISTS not supported for types)
+DO $$ BEGIN
+    CREATE TYPE user_role_enum AS ENUM ('MANAGER', 'TELLER', 'ADMIN');
+EXCEPTION WHEN duplicate_object THEN NULL;
+END $$;
+
+DO $$ BEGIN
+    CREATE TYPE audit_action_enum AS ENUM ('CREATE', 'UPDATE', 'ACTIVATE', 'INACTIVATE', 'REACTIVATE');
+EXCEPTION WHEN duplicate_object THEN NULL;
+END $$;
 
 -- ================================================================
 -- MAIN USERS TABLE
 -- Core user table with role-based access control
 -- ================================================================
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     user_id BIGSERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     login_id VARCHAR(50) NOT NULL UNIQUE,
@@ -38,7 +46,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_users_login_id_unique ON users(login_id);
 -- USER AUDIT LOG TABLE
 -- Track all user management operations for compliance
 -- ================================================================
-CREATE TABLE user_audit_log (
+CREATE TABLE IF NOT EXISTS user_audit_log (
     audit_id BIGSERIAL PRIMARY KEY,
     user_id BIGINT,
     action audit_action_enum NOT NULL,
@@ -66,7 +74,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Create trigger for users table
+-- Create trigger for users table (drop first to allow re-running)
+DROP TRIGGER IF EXISTS users_update_timestamp ON users;
 CREATE TRIGGER users_update_timestamp BEFORE UPDATE ON users
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
@@ -75,14 +84,17 @@ CREATE TRIGGER users_update_timestamp BEFORE UPDATE ON users
 -- ================================================================
 
 -- Ensure login_id is not empty and properly formatted
+ALTER TABLE users DROP CONSTRAINT IF EXISTS check_login_id_length;
 ALTER TABLE users ADD CONSTRAINT check_login_id_length 
     CHECK (LENGTH(login_id) >= 3 AND LENGTH(login_id) <= 50);
 
 -- Ensure username is not empty
+ALTER TABLE users DROP CONSTRAINT IF EXISTS check_username_length;
 ALTER TABLE users ADD CONSTRAINT check_username_length 
     CHECK (LENGTH(username) >= 1 AND LENGTH(username) <= 255);
 
 -- Ensure password is not empty
+ALTER TABLE users DROP CONSTRAINT IF EXISTS check_password_hash_length;
 ALTER TABLE users ADD CONSTRAINT check_password_hash_length 
     CHECK (LENGTH(password) > 0);
 
@@ -111,13 +123,13 @@ ALTER TABLE users ADD CONSTRAINT check_password_hash_length
 -- ================================================================
 
 -- View for active users only
-CREATE VIEW active_users AS
+CREATE OR REPLACE VIEW active_users AS
 SELECT user_id, username, login_id, role, created_at, updated_at
 FROM users
 WHERE is_active = TRUE;
 
 -- View for user statistics by role
-CREATE VIEW user_role_statistics AS
+CREATE OR REPLACE VIEW user_role_statistics AS
 SELECT 
     role,
     COUNT(*) as total_users,
