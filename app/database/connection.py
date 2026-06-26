@@ -295,9 +295,4 @@ SCHEMA_NAME = "users_service"
 # Update search_path for PostgreSQL
 async def set_schema_search_path(connection):
     """Set the search path to use the correct schema."""
-    print("--> set_schema_search_path inside connection.py was CALLED!")
-    try:
-        await connection.execute(f"SET search_path TO users_service, public")
-        print("--> set_schema_search_path executed successfully!")
-    except Exception as e:
-        print("--> set_schema_search_path FAILED:", e)
+    await connection.execute(f"SET search_path TO users_service, public")
